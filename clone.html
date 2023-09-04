@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>project 1</title>
+    <style>
+        .coustom-line::after {
+            content: '';
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            width: 12%;
+            height: 6px;
+            background-color: rgb(255, 148, 40);
+            margin: auto;
+            /* Center the line within the container */
+        }
+
+        .custom-line::after {
+            content: '';
+            display: block;
+            width: 12%;
+            height: 6px;
+            background-color: rgb(255, 148, 40);
+            margin-left: 0%;
+        }
+
+        .coustom-class {
+            display: flex;
+        }
+
+        .container {
+            --bs-gutter-x: 0rem;
+            --bs-gutter-y: 0rem;
+        }
+
+        .vertical-line {
+            border-left: 1px solid black;
+            height: 100%;
+        }
+        
+
+        @media (min-width:300px) and (max-width:600px) {
+            .coustom-class {
+                display: block;
+                position: absolute;
+            }
+
+            .card-img-overlays {
+                position: relative;
+
+            }
+
+            .image {
+                display: none;
+            }
+
+            .coustom-block {
+                background-color: rgb(3, 3, 60);
+            }
+
+            .line::after {
+                content: '';
+                display: block;
+                width: 12%;
+                height: 6px;
+                background-color: rgb(255, 148, 40);
+                margin-left: 0%;
+            }
+            .vr{
+                display: none;
+            }
+        }
+
+        @media (min-width:600) {
+            .card-img-overlays {
+                position: absolute;
+            }
+
+            .coustom-block {
+                display: none;
+                margin: none;
+                background-color: transparent;
+            }
+
+            
+        }
+        .vr {
+                border-left: 1px solid #ccc;
+                padding: 0.3%;
+            }
+
+        .container-card {
+            display: block;
+            margin: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin: 0%;
+            padding: 0%;
+            border-radius: 0%;
+        }
+
+        .card-img {
+            border-radius: 0;
+        }
+
+        .nav-link::before {
+            transition: 300ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: #dea514;
+        }
+
+        .nav-link-fade-up:hover::before {
+            bottom: 10px;
+            opacity: 1;
+        }
+
+        .nav-link-fade-up::before {
+            width: 100%;
+            bottom: 5px;
+            opacity: 0;
+        }
+
+        .nav-link {
+            font-weight: normal;
+            font-size: 19px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #031D44;
+            padding: 0px;
+            margin: 0px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white container-fluid m-2">
+        <div class="container-fluid text-black-100 text-lg-start">
+            <a class="navbar-brand" href="#">
+                <img src="C:\Users\HP\Pictures\Screenshots\Screenshot 2023-08-10 145124.png" alt="" width="150"
+                    height="70" />
+            </a>
+            <!--
+                <div class="container">
+                </div>-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fs-5" id="navbarNav">
+                <ul class="navbar-nav text-bold ms-3">
+                    <li class="nav-item mx-4  nav-link-fade-up">
+                        <a class="nav-link " href="#">Seller</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Buyers</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Valuations</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Deal flow</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Market</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Investments</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Geography</a>
+                    </li>
+                    <li class="nav-item mx-4 nav-link-fade-up">
+                        <a class="nav-link" href="#">Advisory</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col">
+                <div class="card">
+                    <img src="C:\Users\HP\Documents\html\aiexecs - Copy\images\Layer-71.jpg" class="card-img"
+                        style="width: 100%; object-fit: cover; height: 100vh;" alt="..." />
+                    <div class="card-img-overlay d-flex align-items-center">
+                        <div class="container text-center text-light">
+                            <h2 class="display-1 font-weight-bold"
+                                style="font-family: 'Times New Roman', Times, serif;">AI Execs</h2>
+                            <p class="h3 font-weight-bold  ">
+                                Mergers and Acquisitions in Artificial<br>
+                                Intelligence and Associated Technologies
+                            </p>
+                            <button type="button" class="btn mt-5 btn-danger">Request Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row " style="background-color: aliceblue">
+        <div class="col-sm-5">
+            <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-12.png"
+                class="img-fluid mx-auto float-lg-end mt-xl-4 mb-xl-4" />
+        </div>
+        <div class="col-sm-6">
+            <h2 class="featurette-heading mt-xl-5 custom-line">
+                Be a Winner in the
+                Artificial Intelligence M&A Wave
+            </h2>
+            <p class="lead m-3">
+                Our goal is to provide relevant records and decision-making tools to
+                serve the AI technology sector. We want to be a resource for
+                executives and investors in AI technology companies who are
+                considering their strategic growth and exit options in today’s
+                environment.
+            </p>
+        </div>
+    </div>
+    <div class="container row g-0 mt-lg-5 mb-lg-5 m-auto">
+        <div class="col-sm-4">
+            <div class="card bg-dark text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-171.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Valuations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-dark text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-181.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Deal Flow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-dark text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-191.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Seller Profiles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0 m-auto">
+        <div class="container">
+            <div class="card">
+                <img src="C:\Users\HP\Documents\html\aiexecs - Copy\images\Layer-211.jpg" width="100%" height="600"
+                    class="image" alt="..." />
+                <div class="card-img-overlay card-img-overlays d-lg-flex float-lg-start p-lg-5">
+                    <div class="col-lg-6">
+                        <div class="card-body text-light coustom-block">
+                            <h1 class="mb-3 h2 custom-line">Artificial Intelligence M&A</h1>
+                            <p class="h4">
+                                Artificial Intelligence and the tools that enable AI with data and feedback cycles are
+                                in
+                                high demand, as buyers across all sectors try to stay ahead of this high-stakes trend.
+                                Hear from bankers, buyers, and CEOs on what this M&A feeding frenzy could mean for your
+                                company.
+                            </p>
+                            <ul>
+                                <li>Tim Casio at Samsung NEXT</li>
+                                <li>Jiren Parikh at Ghost Robotics</li>
+                            </ul>
+                            <button type="button" class="btn btn-outline-danger">click to watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="display-4 text-center p-4 mb-lg-5 coustom-line"
+        style="font-family: 'Times New Roman', Times, serif; font-weight: 500; color: rgb(0, 0, 54);">
+        Featured deals</h1>
+    <div class="row m-auto mb-lg-5 hstack">
+        <div class="row col-sm-6 col-12">
+            <div class="d-flex float-end">
+                <div class="col-5">
+                    <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-22-copy.png"
+                        class="rounded img-fluid mx-auto float-end" />
+                </div>
+                <div class="col-7">
+                    <p class="lead">
+                        Ipsum dolor onsadipi scing elite mauris urna adipi scing elite mauris urna tincidunt scing
+                        elite
+                        mauris urna..
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="vr"></div>
+        <div class="row col-sm-6 col-12 d-flex float-start">
+            <div class="col-5">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-22-copy.png"
+                    class="rounded img-fluid mx-auto float-end" />
+            </div>
+            <div class="col-7">
+                <p class="lead">
+                    Ipsum dolor onsadipi scing elite mauris urna adipi scing elite mauris urna tincidunt scing elite
+                    mauris urna..
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-lg-5">
+        <button type="button" class="btn btn-outline-danger ">
+            SEE MORE
+        </button>
+    </div>
+    <div class="container row g-0 mt-lg-5 mb-lg-5 m-auto">
+        <div class="col-sm-4">
+            <div class="card text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-311.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Enabled Markets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-391.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Investments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-light text-center">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-361.jpg" class="card-img"
+                    alt="..." />
+                <div class="card-img-overlay d-flex align-items-end">
+                    <div class="card-body">
+                        <p class="card-title h3">Buyer Knowledge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comtainer row no-gutters m-auto">
+        <div class="container ">
+            <div class="card">
+                <img src="C:\Users\HP\Documents\html\aiexecs - Copy\images\Layer-241.jpg" width="100%" height="500"
+                    class="img-fluid image" alt="..." />
+                <div class="card-img-overlay card-img-overlays text-lg-center float-none">
+                    <div class="container col-lg-8 m-auto d-flex align-items-center mt-xl-5 mb-xl-5">
+                        <div class="card-body text-dark mt-lg-4"
+                            style="background-color: rgb(255, 255, 255); opacity: 0.8;">
+                            <h1 class="mb-lg-5 text-bold h2 coustom-line line"
+                                style="font-family: 'Times New Roman', Times, serif; font-weight: 500;">
+                                Report Summary</h1>
+                            <p class="h4 text-bold " style="font-weight: 300;">
+                                If you are aiming to learn about the key deals and valuations for AI technology
+                                companies, then
+                                you’ve come to the right place. With our report, you’ll get valuable information
+                                that will inform
+                                the future of your company,and educate yourself on the current trends in the market.
+                            </p>
+                            <button type="button" class="btn btn-danger text-center mt-lg-5 mb-lg-5">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+
+        <h1 class="display-4 text-center coustom-line text-dark p-4 mb-lg-5 "
+            style="font-family: 'Times New Roman', Times, serif; font-weight: 500;">
+            Sponsors</h1>
+        <div class="row d-flex text-center m-auto mb-lg-5 justify-content-between">
+            <div class="col-sm-4 mb-lg-none mb-5 ">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-26.png"
+                    class="img-fluid img-thumbnail " alt="..." />
+            </div>
+            <div class="col-sm-4 rounded text-center mb-lg-none mb-5 ">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-27.png" width="220"
+                    height="36" class="img-fluid img-thumbnail" alt="..." />
+            </div>
+            <div class="col-sm-4 mb-lg-none mb-5 ">
+                <img src="file:///C:/Users/HP/Documents/html/aiexecs%20-%20Copy/images/Layer-40.png"
+                    class="img-fluid img-thumbnail " alt="..." />
+            </div>
+        </div>
+    </div>
+    <footer class="row primary text-center m-auto text-lg-start text-light" style="background-color: rgb(2, 2, 63)">
+        <div class="col-sm-2">
+            <ul style="list-style-type: none">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Seller profile</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Valuations</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2  mb-3text-light">Data Flow</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <ul style="list-style-type: none">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 mb-3 text-light">AI Enabled Markets</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Buyer knowledge</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Investments</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Geography</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <ul style="list-style-type: none">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 mb-3 text-light">contact us</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Privacy policy</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Board of Advisors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <ul style="list-style-type: none">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 mb-3 text-light">become a sponsor</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 mb-3 text-light">other Associated sectors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3 ">
+            <ul style="list-style-type: none">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 mb-3 text-light">Request Report</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="row" style="color: white; background-color: rgb(2, 3, 80)">
+        <p class="text-center text-light" style="color: white">
+            © 2018 AI EXECS - All Rights Reserved.
+        </p>
+    </div>
+</body>
+
+</html>
