@@ -1,29 +1,27 @@
-# Project Title
-
-This project contains an HTML document for a website titled "AI Execs."
+# web development 
 
 ## Description
-
 The HTML file serves as the main landing page for the AI Execs website. It includes various sections with information about the project, its purpose, and related content.
 
+## Folder 1: HTML/CSS Project
+Folder 1 contains an HTML/CSS project related to [briefly describe the project or its purpose]. This folder includes the following files and directories:
 
-## Getting Started
+- `index.html`: The main HTML file for the project.
+- `style.css`: The CSS stylesheet for styling the project.
+- `images/`: A directory containing image assets used in the project.
+- [Any other relevant files or directories]
 
-To view the website locally or deploy it, follow these steps:
+### Usage
+Include instructions on how to run or use the HTML/CSS project in Folder 1, if applicable.
 
-1. Clone this repository to your local machine.
-2. Open the HTML file in your preferred web browser.
+## Folder 2: PHP Registration Form
+Folder 2 contains a PHP registration form. This folder includes the following files and directories:
 
-## Usage
+- `registration.php`: The main PHP file for the registration form.
+- [Any other relevant files or directories]
 
-- Navigate through the website by clicking on the navigation links.
-- Interact with different sections of the website to learn more about AI Execs.
-
-## Built With
-
-- HTML
-- CSS
-- Bootstrap
+### Usage
+Include instructions on how to run or use the PHP registration form in Folder 2.
 
 ## Authors
 
