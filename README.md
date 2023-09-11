@@ -28,5 +28,3 @@ To view the website locally or deploy it, follow these steps:
 ## Authors
 
 - Urvashi (https://github.com/urvashi711sharma)
-- touch readme.md
-- 
